@@ -1,0 +1,107 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.page {
+  min-inline-size: 360px;
+  margin: 0;
+}
+
+p,
+h1,
+h2,
+h3,
+blockquote,
+ul,
+ol,
+li,
+figure {
+  margin: 0;
+}
+
+:root {
+  --bg-color: #F3EFEC;
+  --text-color:#312A4E;
+  --accent-color: #FFAB6B;
+  --main-font: Raleway, 'Arial', sans-serif;
+  --accent-font: 'STIX Two Text', serif;
+}
+
+.page {
+  background-color: var(--bg-color, #F3EFEC);
+  color: var(--text-color, #312A4E);
+  font-family: var(--main-font, Raleway, 'Arial', sans-serif);
+  font-weight: 400;
+}
+
+.header {
+  padding: 10% 0 0;
+}
+
+.heading {
+  font-family: var(--accent-font, 'STIX Two Text', serif);
+  line-height: 90%;
+  font-weight: 600;
+  text-align: center;
+}
+
+.content-section {
+  padding: 0 5vi;
+}
+
+.header__title {
+  font-size: clamp(3.75rem, 2.5rem + 5.5556vw, 7.5rem);
+  margin-bottom: 40px;
+}
+
+.content__title {
+  font-size: 30px;
+  margin: 7% 0 2.5%;
+}
+
+.content__text-block {
+  font-size: 18px;
+}
+
+.content__text-block .content__paragraph:not(:last-child) {
+  margin: 0 0 1.5em;
+}
+
+.content__blockquote {
+  width: 75%;
+  margin: 0 12.5% 1.5em;
+  line-height: 200%;
+  font-size: 18px;
+  font-style: italic;
+  display: flex;
+  justify-content: center;
+}
+
+.content__link {
+  color: inherit;
+}
+
+.content__list {
+  list-style-type: none;
+  padding: 0 0 0 40px;
+}
+
+.content__list-item:not(:last-child) {
+  margin: 0 0 10px;
+}
+
+.content__list-item {
+  position: relative;
+}
+
+.content__list-item::before {
+  content: '';
+  width: 15px;
+  height: 15px;
+  background: url('../images/marker-light.svg') no-repeat center / contain;
+  position: absolute;
+  top: 4px;
+  left: -25px;
+}
